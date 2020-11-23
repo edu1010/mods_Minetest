@@ -20,3 +20,26 @@ minetest.register_node("mymod:orichalcum", {
     drop = "mymod:diamond_fragments"
     -- ^  Rather than dropping orichalcum, drop mymod:diamond_fragments
 })
+
+-- craftitem lump
+minetest.register_craftitem("mymod:orichalcum_lump", {
+description = "Orichalcum Lump",
+inventory_image = "mymod_myitem.png"
+})
+-- craftitem ingot
+minetest.register_craftitem("mymod:orichalcum_ingot", {
+description = "Orichalcum Ingot",
+inventory_image = "mymod_myitem.png"
+})
+-- craft de ingot
+minetest.register_craft({
+    type = "cooking",
+    output = "mymod:orichalcum_ingot",
+    recipe = {
+        {"mymod:orichalcum_lump", "",  ""},
+        {"mymod:orichalcum_lump", "",  ""},
+        {"mymod:orichalcum_lump", "",  ""}
+    }
+    cooktime = 10
+})
+
