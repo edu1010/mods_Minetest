@@ -2,20 +2,18 @@ minetest.register_node("ori:orichalcum", {
     description = "Alien orichalcum",
     tiles = {"ori.png"},
     is_ground_content = true,
-    groups = {cracky=3, stone=1}
-	
+    groups = {cracky=3}
 })
-
 
 -- craftitem lump
 minetest.register_craftitem("ori:orichalcum_lump", {
 description = "Orichalcum Lump",
-inventory_image = "ori_myitem.png"
+inventory_image = "ori.png"
 })
 -- craftitem ingot
 minetest.register_craftitem("ori:orichalcum_ingot", {
 description = "Orichalcum Ingot",
-inventory_image = "mymod_myitem.png"
+inventory_image = "ori_ingot.png"
 })
 -- craft de ingot
 minetest.register_craft({
