@@ -4,3 +4,5 @@ creative_mode = false
 gameid = minetest
 auth_backend = sqlite3
 player_backend = sqlite3
+load_mod_mymod = false
+server_announce = false

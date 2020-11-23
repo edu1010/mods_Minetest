@@ -13,3 +13,19 @@
 2020-11-16 17:39:55: ACTION[Server]: singleplayer places node default:dirt at (-49,17,-44)
 2020-11-16 17:40:19: ACTION[Main]: Server: Shutting down
 2020-11-16 17:40:27: ERROR[Main]: ¡Por favor, elige un nombre!
+
+
+-------------
+  Separator
+-------------
+
+2020-11-23 12:17:13: [Main]: Automatically selecting world at [C:\Users\edu10\Documents\GitHub\practica3ModMinecraft\bin\..\worlds\test]
+2020-11-23 12:17:55: ERROR[Main]: ¡Por favor, elige un nombre!
+
+
+-------------
+  Separator
+-------------
+
+2020-11-23 12:18:02: [Main]: Automatically selecting world at [C:\Users\edu10\Documents\GitHub\practica3ModMinecraft\bin\..\worlds\test]
+2020-11-23 12:18:13: ERROR[Main]: ¡Por favor, elige un nombre!
