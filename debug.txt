@@ -19,13 +19,68 @@
   Separator
 -------------
 
+<<<<<<< Updated upstream
 2020-11-23 12:17:13: [Main]: Automatically selecting world at [C:\Users\edu10\Documents\GitHub\practica3ModMinecraft\bin\..\worlds\test]
 2020-11-23 12:17:55: ERROR[Main]: ¡Por favor, elige un nombre!
+=======
+2020-11-23 12:17:46: [Main]: Automatically selecting world at [D:\uni\SEGON\1r TRIM\prog llenguatges interpretats\practiques\prac3\practica3ModMinecraft\bin\..\worlds\test]
+2020-11-23 12:18:42: ACTION[Main]: World at [D:\uni\SEGON\1r TRIM\prog llenguatges interpretats\practiques\prac3\practica3ModMinecraft\bin\..\worlds\Unnamed30703]
+2020-11-23 12:18:42: ACTION[Main]: Server for gameid="minetest" listening on 0.0.0.0:52193.
+2020-11-23 12:18:45: ACTION[Server]: singleplayer [127.0.0.1] joins game. List of players: singleplayer
+2020-11-23 12:18:53: ACTION[Server]: singleplayer digs default:grass_2 at (-59,17,-62)
+2020-11-23 12:18:53: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-59,16,-62)
+2020-11-23 12:18:54: ACTION[Server]: singleplayer digs default:grass_1 at (-58,17,-62)
+2020-11-23 12:18:55: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-58,16,-62)
+2020-11-23 12:19:02: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-58,16,-63)
+2020-11-23 12:19:07: ACTION[Server]: singleplayer digs flowers:dandelion_yellow at (-49,17,-64)
+2020-11-23 12:19:11: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-57,16,-63)
+2020-11-23 12:19:12: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-57,16,-62)
+2020-11-23 12:19:16: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-58,16,-61)
+2020-11-23 12:19:19: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-57,16,-61)
+2020-11-23 12:19:26: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-56,16,-63)
+2020-11-23 12:19:28: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-55,16,-63)
+2020-11-23 12:19:29: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-54,16,-63)
+2020-11-23 12:19:30: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-54,16,-62)
+2020-11-23 12:19:31: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-54,16,-61)
+2020-11-23 12:19:35: ACTION[Main]: Server: Shutting down
+2020-11-23 12:19:37: ERROR[Main]: ¡Por favor, elige un nombre!
+>>>>>>> Stashed changes
 
 
 -------------
   Separator
 -------------
 
+<<<<<<< Updated upstream
 2020-11-23 12:18:02: [Main]: Automatically selecting world at [C:\Users\edu10\Documents\GitHub\practica3ModMinecraft\bin\..\worlds\test]
 2020-11-23 12:18:13: ERROR[Main]: ¡Por favor, elige un nombre!
+=======
+2020-11-23 12:20:08: [Main]: Automatically selecting world at [D:\uni\SEGON\1r TRIM\prog llenguatges interpretats\practiques\prac3\practica3ModMinecraft\bin\..\worlds\Unnamed30703]
+2020-11-23 12:20:41: ACTION[Main]: World at [D:\uni\SEGON\1r TRIM\prog llenguatges interpretats\practiques\prac3\practica3ModMinecraft\bin\..\worlds\Unnamed30703]
+2020-11-23 12:20:41: ACTION[Main]: Server for gameid="minetest" listening on 0.0.0.0:62752.
+2020-11-23 12:20:42: WARNING[ConnectionSend]: con(1852/1) Packet quota used up for peer_id=2, was 1024 pkts
+2020-11-23 12:20:43: ACTION[Server]: singleplayer [127.0.0.1] joins game. List of players: singleplayer
+2020-11-23 12:20:51: ACTION[Server]: singleplayer places node default:dirt at (-54,16,-61)
+2020-11-23 12:20:51: ACTION[Server]: singleplayer places node default:dirt at (-54,16,-62)
+2020-11-23 12:20:52: ACTION[Server]: singleplayer places node default:dirt at (-54,16,-63)
+2020-11-23 12:20:52: ACTION[Server]: singleplayer activates default:dirt
+2020-11-23 12:20:53: ACTION[Server]: singleplayer places node default:dirt at (-54,17,-63)
+2020-11-23 12:20:55: ACTION[Server]: singleplayer digs default:dirt at (-54,17,-63)
+2020-11-23 12:20:56: ACTION[Server]: singleplayer places node default:dirt at (-55,16,-63)
+2020-11-23 12:20:56: ACTION[Server]: singleplayer places node default:dirt at (-56,16,-63)
+2020-11-23 12:20:57: ACTION[Server]: singleplayer places node default:dirt at (-58,16,-63)
+2020-11-23 12:20:57: ACTION[Server]: singleplayer places node default:dirt at (-57,16,-62)
+2020-11-23 12:20:58: ACTION[Server]: singleplayer places node default:dirt at (-57,16,-63)
+2020-11-23 12:20:59: ACTION[Server]: singleplayer places node default:dirt at (-59,16,-62)
+2020-11-23 12:20:59: ACTION[Server]: singleplayer places node default:dirt at (-58,16,-62)
+2020-11-23 12:20:59: ACTION[Server]: singleplayer places node default:dirt at (-58,16,-61)
+2020-11-23 12:21:00: ACTION[Server]: singleplayer places node default:dirt at (-57,16,-61)
+2020-11-23 12:21:03: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-56,16,-62)
+2020-11-23 12:21:05: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-55,16,-62)
+2020-11-23 12:21:05: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-55,16,-61)
+2020-11-23 12:21:06: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-56,16,-61)
+2020-11-23 12:21:07: ACTION[Server]: singleplayer places node default:dirt at (-56,16,-61)
+2020-11-23 12:21:07: ACTION[Server]: singleplayer places node default:dirt at (-56,16,-62)
+2020-11-23 12:21:08: ACTION[Server]: singleplayer places node default:dirt at (-55,16,-61)
+2020-11-23 12:21:08: ACTION[Server]: singleplayer places node default:dirt at (-55,17,-63)
+>>>>>>> Stashed changes
