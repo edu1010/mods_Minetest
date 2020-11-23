@@ -1,0 +1,15 @@
+
+
+-------------
+  Separator
+-------------
+
+2020-11-16 17:39:38: ACTION[Main]: World at [C:\Users\edu10\Desktop\minetest-5.3.0-win64\bin\..\worlds\test]
+2020-11-16 17:39:38: ACTION[Main]: Server for gameid="minetest" listening on 0.0.0.0:51685.
+2020-11-16 17:39:40: ACTION[Server]: singleplayer [127.0.0.1] joins game. List of players: singleplayer
+2020-11-16 17:39:41: ACTION[Server]: singleplayer activates 
+2020-11-16 17:39:51: ACTION[Server]: singleplayer activates 
+2020-11-16 17:39:53: ACTION[Server]: singleplayer digs default:dirt_with_grass at (-49,17,-44)
+2020-11-16 17:39:55: ACTION[Server]: singleplayer places node default:dirt at (-49,17,-44)
+2020-11-16 17:40:19: ACTION[Main]: Server: Shutting down
+2020-11-16 17:40:27: ERROR[Main]: ¡Por favor, elige un nombre!
