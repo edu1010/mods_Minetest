@@ -8,12 +8,12 @@ minetest.register_node("ori:orichalcum", {
 minetest.register_node("ori:orichalcum", {
     description = "Alien orichalcum",
     tiles = {
-        "mymod_diamond_up.png",    -- y+
-        "mymod_diamond_down.png",  -- y-
-        "mymod_diamond_right.png", -- x+
-        "mymod_diamond_left.png",  -- x-
-        "mymod_diamond_back.png",  -- z+
-        "mymod_diamond_front.png", -- z-
+        "ori.png",    -- y+
+        "ori.png",  -- y-
+        "ori.png", -- x+
+        "ori.png",  -- x-
+        "ori.png",  -- z+
+        "ori.png", -- z-
     },
     is_ground_content = true,
     groups = {cracky = 3},
