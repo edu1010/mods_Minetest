@@ -2,7 +2,7 @@ minetest.register_node("ori:orichalcum", {
     description = "Alien orichalcum",
     tiles = {"ori.png"},
     is_ground_content = true,
-    groups = {cracky=3, stone=1}
+    groups = {cracky=3}
 	
 })
 
