@@ -10,6 +10,17 @@ minetest.register_node("mymod:nodeOri", {
   groups = {cracky = 3},
   drop = "mymod:stoneOri"
 })
+--add stone to wordl
+minetest.register_ore({--Makes appear the node in the world https://dev.minetest.net/minetest.register_ore
+  ore_type = "scatter",--Randomly chooses a location and generates a cluster of ore
+  ore = "mymod:nodeOri",
+  wherein         = {"default:stone"},
+  clust_scarcity  = 16 * 16 * 16,
+  clust_num_ores = 8,
+  clust_size     = 3,
+  height_min     = -31000,
+  height_max     = 64,
+})
 
 minetest.register_craftitem("mymod:ingotOri", {
   description = "ori's ingot",
