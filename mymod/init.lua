@@ -15,52 +15,103 @@ minetest.register_craftitem("mymod:ingotOri", {
   description = "ori's ingot",
   inventory_image = "oriIngot.png"
 })
-
-
-
-
-minetest.register_tool("default:swordOri", {
-    description = "Steel ori",
-    inventory_image = "default_tool_steelsword.png",
-    tool_capabilities = {
-        -- Digging capabilities
-        max_drop_level = 1,
-        groupcaps = {
-            fleshy={times={[1]=2.00, [2]=0.80, [3]=0.40}, uses=10, maxlevel=2},
-            snappy={times={[2]=0.70, [3]=0.30}, uses=40, maxlevel=1},
-            choppy={times={[3]=0.65}, uses=40, maxlevel=0}
-        },
-        -- Damage capabilities
-        full_punch_interval = 0.8,
-        damage_groups = {fleshy=8, snappy=4, choppy=2},
-    }
-})
-
-minetest.register_craft({
-      output = "mymod:swordOri 1"
-      recipe = {
-        {"mymod:ingotOri","mymod:ingotOri",},
-        {"mymod:ingotOri","mymod:ingotOri",},
-      }
-})
---[[
+-- ingot's craft
 minetest.register_craft({
   type = "cooking",
   output = "mymod:ingotOri",
   recipe = "mymod:stoneOri",
   cooktime = 4
 })
-
--- set completo de herramientas:
-minetest.register_tool("mymod:pickOri", {
-  
+-- complete set of tools
+-- sword
+minetest.register_tool("mymod:swordOri", {
+    description = "ori's sword",
+    inventory_image = "oriSword.png",
+	tool_capabilities = {
+		full_punch_interval = 0.8,
+		max_drop_level=1,
+		groupcaps={
+			snappy={times={[1]=2.5, [2]=1.20, [3]=0.35}, uses=30, maxlevel=2},
+		},
+		damage_groups = {fleshy=6},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {sword = 1}
 })
 
 minetest.register_craft({
-  type = "shapeless", --? ns
-  output = "mymod:pickOri",
-  recipe = ""
+  output = "mymod:swordOri",
+  recipe = {
+    {"mymod:stoneOri","mymod:ingotOri",},
+    {"mymod:ingotOri","mymod:ingotOri",},
+  }
 })
---]]
+-- pick
+minetest.register_tool("mymod:pickOri", {
+  description = "ori's pick",
+  inventory_image = "oriPick.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			cracky = {times={[1]=4.00, [2]=1.60, [3]=0.80}, uses=20, maxlevel=2},
+		},
+		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {pickaxe = 1}
+})
 
+minetest.register_craft({
+  output = "mymod:pickOri",
+  recipe = {
+    {"mymod:ingotOri","mymod:stoneOri",},
+    {"mymod:ingotOri","mymod:ingotOri",},
+  }
+})
+-- axe
+minetest.register_tool("mymod:axeOri", {
+  description = "ori's axe",
+  inventory_image = "oriAxe.png",
+	tool_capabilities = {
+		full_punch_interval = 1.0,
+		max_drop_level=1,
+		groupcaps={
+			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=20, maxlevel=2},
+		},
+		damage_groups = {fleshy=4},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {axe = 1}
+})
 
+minetest.register_craft({
+  output = "mymod:axeOri",
+  recipe = {
+    {"mymod:ingotOri","mymod:ingotOri",},
+    {"mymod:stoneOri","mymod:ingotOri",},
+  }
+})
+-- shovel
+minetest.register_tool("mymod:shovelOri", {
+  description = "ori's shovel",
+  inventory_image = "oriShovel.png",
+	tool_capabilities = {
+		full_punch_interval = 1.1,
+		max_drop_level=1,
+		groupcaps={
+			crumbly = {times={[1]=1.50, [2]=0.90, [3]=0.40}, uses=30, maxlevel=2},
+		},
+		damage_groups = {fleshy=3},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {shovel = 1}
+})
+
+minetest.register_craft({
+  output = "mymod:shovelOri",
+  recipe = {
+    {"mymod:ingotOri","mymod:ingotOri",},
+    {"mymod:ingotOri","mymod:stoneOri",},
+  }
+})
