@@ -16,10 +16,8 @@ minetest.register_node("teleport:pad", {
   meta:set_int("y", pos.y)
   meta:set_int("z", pos.z)  --]]
 })
-minetest.register_node("teleport:command", {
+minetest.register_craftitem("teleport:command", {
   description = "object to be teleported to the platform",
-  tiles = {"default_stone_brick.png"},
-  is_ground_content = true,
-  groups = {cracky = 3},
+  inventory_image = "mando.png",
 })
 
