@@ -13,6 +13,10 @@ minetest.register_node("teleport:pad", {
     local stack = ItemStack("teleport:command 1")
     local leftover = inv:add_item("main", stack)
   end
+  local meta = stack:get_meta()
+  meta:set_int("x", pos.x)
+  meta:set_int("y", pos.y)
+  meta:set_int("z", pos.z)  
 })
 minetest.register_node("teleport:command", {
   description = "This node destroy the nearest nodes",
