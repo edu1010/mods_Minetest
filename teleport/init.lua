@@ -2,7 +2,14 @@
 
 minetest.register_node("teleport:pad", {
   description = "This node is a teleport platform",
-  tiles = {"default_stone_brick.png"},
+  tiles = {
+    "portalsuperior.png",    -- y+
+    "portalLateral.png",  -- y-
+    "portalLateral.png", -- x+
+    "portalLateral.png",  -- x-
+    "portalLateral.png",  -- z+
+    "portalLateral.png", -- z-
+  },
   is_ground_content = true,
   groups = {cracky = 3},
   on_punch = function(pos, node, player, pointed_thing)
