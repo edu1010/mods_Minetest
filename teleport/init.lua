@@ -1,9 +1,7 @@
 --default_stone_brick.png
-n nodo teleport:pad
-y un item teleport:command
 
 minetest.register_node("teleport:pad", {
-  description = "This node destroy the nearest nodes",
+  description = "This node is a teleport platform",
   tiles = {"default_stone_brick.png"},
   is_ground_content = true,
   groups = {cracky = 3},
@@ -19,7 +17,7 @@ minetest.register_node("teleport:pad", {
   meta:set_int("z", pos.z)  
 })
 minetest.register_node("teleport:command", {
-  description = "This node destroy the nearest nodes",
+  description = "object to be teleported to the platform",
   tiles = {"default_stone_brick.png"},
   is_ground_content = true,
   groups = {cracky = 3},
