@@ -2,7 +2,14 @@
 
 minetest.register_node("teleport:pad", {
   description = "This node is a teleport platform",
-  tiles = {"default_stone_brick.png"},
+  tiles = {
+    "portalsuperior.png",    -- y+
+    "portalLateral.png",  -- y-
+    "portalLateral.png", -- x+
+    "portalLateral.png",  -- x-
+    "portalLateral.png",  -- z+
+    "portalLateral.png", -- z-
+  },
   is_ground_content = true,
   groups = {cracky = 3},
   on_punch = function(pos, node, player, pointed_thing)
@@ -16,10 +23,8 @@ minetest.register_node("teleport:pad", {
   meta:set_int("y", pos.y)
   meta:set_int("z", pos.z)  --]]
 })
-minetest.register_node("teleport:command", {
+minetest.register_craftitem("teleport:command", {
   description = "object to be teleported to the platform",
-  tiles = {"default_stone_brick.png"},
-  is_ground_content = true,
-  groups = {cracky = 3},
+  inventory_image = "mando.png",
 })
 
