@@ -47,7 +47,7 @@ minetest.register_abm({
  catch_up = false,
  action = function(pos, node, active_object_count, active_object_count_wider)
     local pos = {x = pos.x, y = pos.y, z = pos.z}
-    minetest.set_node(pos, {name = ""})--default:air no existe
+    minetest.set_node(pos, {name = "air"})--default:air no existe
  end
  })
 --[[
