@@ -37,6 +37,7 @@ minetest.register_abm({
     local pos = {x = pos.x, y = pos.y, z = pos.z}
     minetest.set_node(pos, {name = "rot:dirt"})
  end
+ })
 --Un ABM que destruya la tierra podrida (para destruir un nodo basta con poder en su
 --lugar un nodo air).
 minetest.register_abm({
@@ -46,8 +47,9 @@ minetest.register_abm({
  catch_up = false,
  action = function(pos, node, active_object_count, active_object_count_wider)
     local pos = {x = pos.x, y = pos.y, z = pos.z}
-    minetest.set_node(pos, {name = "default:air"})
+    minetest.set_node(pos, {name = ""})--default:air no existe
  end
+ })
 --[[
 minetest.register_abm({
  nodenames = {"rot:purgator"},
@@ -66,7 +68,7 @@ nodos default:dirt y rot:dirt, crearemos una función purge_rotdirt(pos, size) d
 pasaremos una posición y en un cubo de tamaño size con centro pos convertiremos todos los
 nodos de rot:dirt en default:di--]]
 
-
+--[[
 -- Get content IDs during load time, and store into a local
 local c_dirt = minetest.get_content_id("default:dirt")
 local c_RootDir = minetest.get_content_id("rot:dirt")
@@ -76,9 +78,9 @@ local function purge_rotdirt(pos, size)
   local a = VoxelArea:new{ MinEdge = emin, MaxEdge = emax }
   local data = vm:get_data()
   -- Modify data
-  for z = pos do
-    for y = pos do
-      for x = pos do
+  for z = pos.z do
+    for y = pos.y do
+      for x = pos.x do
         local vi = a:index(x, y, z)
         if data[vi] == c_RootDir then
           data[vi] = c_dirt
@@ -91,3 +93,4 @@ local function purge_rotdirt(pos, size)
   vm:write_to_map(true)
 
 end
+--]]
