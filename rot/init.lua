@@ -42,7 +42,7 @@ minetest.register_abm({
 --lugar un nodo air).
 minetest.register_abm({
  nodenames = {"rot:dirt"},
- interval = 30.0,
+ interval = 15,
  chance = 350,
  catch_up = false,
  action = function(pos, node, active_object_count, active_object_count_wider)
@@ -50,37 +50,35 @@ minetest.register_abm({
     minetest.set_node(pos, {name = "air"})--default:air no existe
  end
  })
---[[
+
 minetest.register_abm({
  nodenames = {"rot:purgator"},
- neighbors = {"default:dirt_with_grass"},
- interval = 30.0,
- chance = 350,
+ interval = 10.0,
+ chance = 50,
  catch_up = false,
- action = function(pos, node, active_object_count, active_object_count_wider)
- local pos = {x = pos.x, y = pos.y, z = pos.z}
- minetest.set_node(pos, {name = "default:dirt_with_grass"})
- end
-})--]]
+ action = purge_rotdirt(pos,pos, 8)
+})
 
 --[[Cogiendo como referencia el codigo de ejemplo visto antes, cargaremos el content id de los
 nodos default:dirt y rot:dirt, crearemos una función purge_rotdirt(pos, size) donde le
 pasaremos una posición y en un cubo de tamaño size con centro pos convertiremos todos los
-nodos de rot:dirt en default:di--]]
+nodos de rot:dirt en default:dirt--]]
 
---[[
 -- Get content IDs during load time, and store into a local
 local c_dirt = minetest.get_content_id("default:dirt")
 local c_RootDir = minetest.get_content_id("rot:dirt")
-local function purge_rotdirt(pos, size)
+local function purge_rotdirt(pos1,pos2, size)
   local vm = minetest.get_voxel_manip()
   local emin, emax = vm:read_from_map(pos)
   local a = VoxelArea:new{ MinEdge = emin, MaxEdge = emax }
   local data = vm:get_data()
+  pos1 = {x = pos1.x - size, y = pos1.y-size}
+  pos2 = {x = pos2.x - size, y = pos2.y + size}
+  
   -- Modify data
-  for z = pos.z do
-    for y = pos.y do
-      for x = pos.x do
+  for z = pos1.z,pos2.z  do
+    for y = pos1.y, pos2.y  do
+      for x = pos1. x,pos2.x do
         local vi = a:index(x, y, z)
         if data[vi] == c_RootDir then
           data[vi] = c_dirt
@@ -93,4 +91,3 @@ local function purge_rotdirt(pos, size)
   vm:write_to_map(true)
 
 end
---]]
