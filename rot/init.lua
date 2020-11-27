@@ -5,8 +5,8 @@ minetest.register_node("rot:dirt", {
   groups = {cracky = 3},
 })
 minetest.register_node("rot:purgator", {
-  description = "This node restore the nearest nodes",
-  tiles = {"dirt.png"},
+  description = "This purgator restores the nearest nodes",
+  tiles = {"purgator.png"},
   is_ground_content = true,
   groups = {cracky = 3},
 })
