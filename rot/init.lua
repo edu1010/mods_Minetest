@@ -51,13 +51,7 @@ minetest.register_abm({
  end
  })
 
-minetest.register_abm({
- nodenames = {"rot:purgator"},
- interval = 10.0,
- chance = 50,
- catch_up = false,
- action = purge_rotdirt(pos,pos, 8)
-})
+
 
 --[[Cogiendo como referencia el codigo de ejemplo visto antes, cargaremos el content id de los
 nodos default:dirt y rot:dirt, crearemos una función purge_rotdirt(pos, size) donde le
@@ -67,14 +61,14 @@ nodos de rot:dirt en default:dirt--]]
 -- Get content IDs during load time, and store into a local
 local c_dirt = minetest.get_content_id("default:dirt")
 local c_RootDir = minetest.get_content_id("rot:dirt")
-local function purge_rotdirt(pos1,pos2, size)
-  local vm = minetest.get_voxel_manip()
-  local emin, emax = vm:read_from_map(pos)
-  local a = VoxelArea:new{ MinEdge = emin, MaxEdge = emax }
-  local data = vm:get_data()
-  pos1 = {x = pos1.x - size, y = pos1.y-size}
-  pos2 = {x = pos2.x - size, y = pos2.y + size}
+local function purge_rotdirt(pos, size)
+  local pos1 = {x = pos.x -size, y = pos.y- size, z = pos.z-size}
+  local pos2 = {x = pos.x+size, y = pos.y+size, z = pos.z+size}
   
+  local vm = minetest.get_voxel_manip()
+  local emin, emax = vm:read_from_map(pos1,pos2)
+  local a = VoxelArea:new{ MinEdge = emin, MaxEdge = emax }
+  local data = vm:get_data() 
   -- Modify data
   for z = pos1.z,pos2.z  do
     for y = pos1.y, pos2.y  do
@@ -91,3 +85,13 @@ local function purge_rotdirt(pos1,pos2, size)
   vm:write_to_map(true)
 
 end
+minetest.register_abm({
+ nodenames = {"rot:purgator"},
+ interval = 1.0,
+ chance = 1,
+ catch_up = false,
+ action = function(pos)
+   purge_rotdirt(pos,4)
+ end
+ 
+})
