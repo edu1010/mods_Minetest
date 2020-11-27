@@ -1,7 +1,7 @@
 --default_stone_brick.png
 
 minetest.register_node("teleport:pad", {
-  description = "This node is a teleport platform",
+  description = "this node is a teleport platform",
   tiles = {
     "portalsuperior.png",    -- y+
     "portalLateral.png",  -- y-
@@ -15,23 +15,23 @@ minetest.register_node("teleport:pad", {
   after_place_node = function(pos, node, player, pointed_thing)
     local player = minetest.get_player_by_name("singleplayer")
     local inv = player:get_inventory()
-    local stack = ItemStack("teleport:command 1")
+    local stack = ItemStack("teleport:command")
     local leftover = inv:add_item("main", stack)
     
-    local meta = stack:get_meta()
+    local meta = player:get_meta()
     meta:set_int("x", pos.x)
-    meta:set_int("y", pos.y)
+    meta:set_int("y", pos.y+1)
     meta:set_int("z", pos.z)
-
   end,
 
 })
 minetest.register_craftitem("teleport:command", {
-  description = "object to be teleported to the platform",
+  description = "command to be teleported to the pad",
   inventory_image = "mando.png",
   
   on_use = function(pos, node, player, pointed_thing)
-    local meta = itemstack:get_meta() --itemstack??
+    local player = minetest.get_player_by_name("singleplayer")
+    local meta = player:get_meta()
     local pos = {x=meta:get_int("x"), y=meta:get_int("y"), z=meta:get_int("z")}
     player:set_pos(pos)
   end,
