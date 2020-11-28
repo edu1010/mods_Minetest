@@ -1,19 +1,19 @@
-minetest.register_craftitem("mymod:stoneOri", {
+minetest.register_craftitem("ori:stoneOri", {
   description = "stone with orichalcum",
   inventory_image = "oriStone.png"
 })
 
-minetest.register_node("mymod:nodeOri", {
+minetest.register_node("ori:nodeOri", {
   description = "orichalcum node",
   tiles = {"oriStone.png"},
   is_ground_content = true,
   groups = {cracky = 3},
-  drop = "mymod:stoneOri"
+  drop = "ori:stoneOri"
 })
 --add stone to wordl
 minetest.register_ore({--Makes appear the node in the world https://dev.minetest.net/minetest.register_ore
   ore_type = "scatter",--Randomly chooses a location and generates a cluster of ore
-  ore = "mymod:nodeOri",
+  ore = "ori:nodeOri",
   wherein         = {"default:stone"},
   clust_scarcity  = 16 * 16 * 16,
   clust_num_ores = 8,
@@ -22,20 +22,20 @@ minetest.register_ore({--Makes appear the node in the world https://dev.minetest
   height_max     = 64,
 })
 
-minetest.register_craftitem("mymod:ingotOri", {
+minetest.register_craftitem("ori:ingotOri", {
   description = "ori's ingot",
   inventory_image = "oriIngot.png"
 })
 -- ingot's craft
 minetest.register_craft({
   type = "cooking",
-  output = "mymod:ingotOri",
-  recipe = "mymod:stoneOri",
+  output = "ori:ingotOri",
+  recipe = "ori:stoneOri",
   cooktime = 4
 })
 -- complete set of tools
 -- sword
-minetest.register_tool("mymod:swordOri", {
+minetest.register_tool("ori:swordOri", {
     description = "ori's sword",
     inventory_image = "oriSword.png",
 	tool_capabilities = {
@@ -51,14 +51,14 @@ minetest.register_tool("mymod:swordOri", {
 })
 
 minetest.register_craft({
-  output = "mymod:swordOri",
+  output = "ori:swordOri",
   recipe = {
-    {"mymod:stoneOri","mymod:ingotOri",},
-    {"mymod:ingotOri","mymod:ingotOri",},
+    {"ori:stoneOri","ori:ingotOri",},
+    {"ori:ingotOri","ori:ingotOri",},
   }
 })
 -- pick
-minetest.register_tool("mymod:pickOri", {
+minetest.register_tool("ori:pickOri", {
   description = "ori's pick",
   inventory_image = "oriPick.png",
 	tool_capabilities = {
@@ -74,14 +74,14 @@ minetest.register_tool("mymod:pickOri", {
 })
 
 minetest.register_craft({
-  output = "mymod:pickOri",
+  output = "ori:pickOri",
   recipe = {
-    {"mymod:ingotOri","mymod:stoneOri",},
-    {"mymod:ingotOri","mymod:ingotOri",},
+    {"ori:ingotOri","ori:stoneOri",},
+    {"ori:ingotOri","ori:ingotOri",},
   }
 })
 -- axe
-minetest.register_tool("mymod:axeOri", {
+minetest.register_tool("ori:axeOri", {
   description = "ori's axe",
   inventory_image = "oriAxe.png",
 	tool_capabilities = {
@@ -97,14 +97,14 @@ minetest.register_tool("mymod:axeOri", {
 })
 
 minetest.register_craft({
-  output = "mymod:axeOri",
+  output = "ori:axeOri",
   recipe = {
-    {"mymod:ingotOri","mymod:ingotOri",},
-    {"mymod:stoneOri","mymod:ingotOri",},
+    {"ori:ingotOri","ori:ingotOri",},
+    {"ori:stoneOri","ori:ingotOri",},
   }
 })
 -- shovel
-minetest.register_tool("mymod:shovelOri", {
+minetest.register_tool("ori:shovelOri", {
   description = "ori's shovel",
   inventory_image = "oriShovel.png",
 	tool_capabilities = {
@@ -120,9 +120,9 @@ minetest.register_tool("mymod:shovelOri", {
 })
 
 minetest.register_craft({
-  output = "mymod:shovelOri",
+  output = "ori:shovelOri",
   recipe = {
-    {"mymod:ingotOri","mymod:ingotOri",},
-    {"mymod:ingotOri","mymod:stoneOri",},
+    {"ori:ingotOri","ori:ingotOri",},
+    {"ori:ingotOri","ori:stoneOri",},
   }
 })
