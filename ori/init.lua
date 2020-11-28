@@ -53,8 +53,9 @@ minetest.register_tool("ori:swordOri", {
 minetest.register_craft({
   output = "ori:swordOri",
   recipe = {
-    {"ori:stoneOri","ori:ingotOri",},
-    {"ori:ingotOri","ori:ingotOri",},
+    {"","ori:ingotOri",},
+    {"","ori:ingotOri",},
+    {"","default:stick",},
   }
 })
 -- pick
@@ -76,8 +77,9 @@ minetest.register_tool("ori:pickOri", {
 minetest.register_craft({
   output = "ori:pickOri",
   recipe = {
-    {"ori:ingotOri","ori:stoneOri",},
-    {"ori:ingotOri","ori:ingotOri",},
+    {"ori:ingotOri","ori:ingotOri","ori:ingotOri",},
+    {"","default:stick",""},
+    {"","default:stick",""},
   }
 })
 -- axe
@@ -100,7 +102,8 @@ minetest.register_craft({
   output = "ori:axeOri",
   recipe = {
     {"ori:ingotOri","ori:ingotOri",},
-    {"ori:stoneOri","ori:ingotOri",},
+    {"ori:ingotOri","default:stick",},
+    {"","default:stick",},
   }
 })
 -- shovel
@@ -122,7 +125,8 @@ minetest.register_tool("ori:shovelOri", {
 minetest.register_craft({
   output = "ori:shovelOri",
   recipe = {
-    {"ori:ingotOri","ori:ingotOri",},
-    {"ori:ingotOri","ori:stoneOri",},
+    {"","ori:ingotOri",},
+    {"","default:stick",},
+    {"","default:stick",},
   }
 })
