@@ -13,13 +13,13 @@ minetest.register_node("teleport:pad", {
   after_place_node = function(pos, placer, itemstack, pointed_thing)
     local player = minetest.get_player_by_name("singleplayer")
     local inv = player:get_inventory()
-    stack = ItemStack("teleport:command 1")
-    local leftover = inv:add_item("main", stack)
-    
+   local stack = ItemStack("teleport:command 1")
     local meta = stack:get_meta()
     meta:set_int("x", pos.x)
     meta:set_int("y", pos.y+1)
     meta:set_int("z", pos.z)
+     
+    local leftover = inv:add_item("main", stack)
   end,
 
 })
@@ -30,7 +30,7 @@ minetest.register_craftitem("teleport:command", {
   on_use = function(itemstack, dropper, pos)
     a()
     local player = minetest.get_player_by_name("singleplayer")
-    local meta = stack:get_meta()
+    local meta = itemstack:get_meta()
     local pos = {x=meta:get_int("x"), y=meta:get_int("y"), z=meta:get_int("z")}
     player:set_pos(pos)
   end,
