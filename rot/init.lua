@@ -43,7 +43,7 @@ minetest.register_abm({
 minetest.register_abm({
  nodenames = {"rot:dirt"},
  interval = 15,
- chance = 350,
+ chance = 20,
  catch_up = false,
  action = function(pos, node, active_object_count, active_object_count_wider)
     local pos = {x = pos.x, y = pos.y, z = pos.z}
