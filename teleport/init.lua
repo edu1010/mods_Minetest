@@ -15,6 +15,7 @@ minetest.register_node("teleport:pad", {
     local inv = player:get_inventory()
     stack = ItemStack("teleport:command")
     local leftover = inv:add_item("main", stack)
+    
     local meta = stack:get_meta()
     meta:set_int("x", pos.x)
     meta:set_int("y", pos.y+1)
