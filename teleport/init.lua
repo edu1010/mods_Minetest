@@ -28,14 +28,9 @@ minetest.register_craftitem("teleport:command", {
   inventory_image = "mando.png",
   
   on_use = function(itemstack, dropper, pos)
-    a()
     local player = minetest.get_player_by_name("singleplayer")
     local meta = itemstack:get_meta()
     local pos = {x=meta:get_int("x"), y=meta:get_int("y"), z=meta:get_int("z")}
     player:set_pos(pos)
   end,
 })
-
-function a()
-  print("hola")
-end
