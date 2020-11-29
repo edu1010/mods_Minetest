@@ -1,3 +1,5 @@
+-- Realizado por Eduard Corral López y Paula Ros Márquez.
+
 minetest.register_node("rot:dirt", {
   description = "dirty dirt",
   tiles = {"dirt.png"},

@@ -1,4 +1,6 @@
--- ejercicio 1 mymod de prueba
+-- Realizado por Eduard Corral López y Paula Ros Márquez.
+
+-- Ejercicio 1 mymod de prueba
 minetest.register_node("mymod:mynode", {
 description = "My node",
 tiles = {"mymod_mynode.png"},

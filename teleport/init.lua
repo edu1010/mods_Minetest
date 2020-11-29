@@ -1,3 +1,5 @@
+-- Realizado por Eduard Corral López y Paula Ros Márquez.
+
 minetest.register_node("teleport:pad", {
   description = "this node is a teleport platform",
   tiles = {

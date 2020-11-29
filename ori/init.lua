@@ -1,3 +1,5 @@
+-- Realizado por Eduard Corral López y Paula Ros Márquez.
+
 minetest.register_craftitem("ori:stoneOri", {
   description = "stone with orichalcum",
   inventory_image = "oriStone.png"
